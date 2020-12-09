@@ -1,29 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
     <meta charset="UTF-8">
     <meta name="Jourdan's Portfolio" content="My website">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jourdan Holmes</title>
     <link rel="stylesheet" href="style.css">
-    <style> 
-    h1{
-    font-family: 'Shrikhand';
+
+<style>
+body {font-family: Montserrat, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: darkseagreen;
+  color: white;
+  padding: 18px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: darkgoldenrod;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: whitesmoke;
+  padding: 20px;
+}
+        h1{
+        padding: 10px;
+        font-family: 'Shrikhand';
         color: darkseagreen;
         font-size: 4em;
-        
         }
-        p{
-            font-size: 2em;
-            font-family: 'Montserrat';
+    
+    h2{
+        padding: 10px;
+        font-family: 'Montserrat';
+        color: darkseagreen;
+        font-size: 1em;
         }
-    </style>
-</head>
 
+</style>
+</head>
 <body>
-    <nav id="nav">
+
+ <nav id="nav">
         <div class="navLinks">
             <a href="index.html">
                 <div class="navLink">Home</div>
@@ -38,24 +73,39 @@
                 <div class="navLink">Contact</div>
             </a>
         </div>
-        <div class="navTitle">
-            Blahblaha
-        </div>
     </nav>
-    <div id="pageBody">
-        <div class="contactContent">
-            <h1> Email: </h1>
-            <h2><a href="project3.html">
-                <div class="navLink">Project 3</div>
-            </a>
-            <a href="project2.html">
-                <div class="navLink">Project 2</div>
-            </a></h2>
-            <p> Personal: jjm324@gmail.com OR jholmes64@gatech.edu </p>
-            <p> Shop inquiries: bluelightresin@gmail.com
-            </p>
-        </div>
-    </div>
-</body>
+    
+    <h1> Contact form: </h1>
+    <h2> (The form does not submit anywhere at the moment, just here to show implementation!) </h2>   
 
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="name">Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+      <label for="email">Email</label>
+    <input type="text" id="email" name="emailid" placeholder="Your email..">
+
+    <label for="Subject">Subject</label>
+    <select id="subject" name="subject">
+      <option value="Shop">Shop Inquiry</option>
+      <option value="Roller">Skating Inquiry</option>
+      <option value="FTK">For the Kids/Fundraising Inquiry</option>
+        <option value="Other">Other</option>
+    </select>
+      
+      <label for="Other">If "other", please write subject here</label>
+    <input type="text" id="other" name="other inquiry" placeholder="Other...">
+
+
+    <label for="content">Content</label>
+    <textarea id="subject" name="content" placeholder="Let me know what's up!" style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+    
+</div>
+
+</body>
 </html>

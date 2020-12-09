@@ -1,16 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
- 
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="Jourdan's Portfolio" content="My website">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jourdan Holmes</title>
     <link rel="stylesheet" href="style.css">
+
+<style>
     
-    <style>
-    h1{
+* {box-sizing: border-box}
+body {font-family: Montserrat, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: whitesmoke;
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 14px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: gold;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+     h1{
         font-family: 'Shrikhand';
         color:darkseagreen;
         font-size: 3em;
@@ -19,17 +117,17 @@
     p{
         font-size: 1.4em;
         margin-bottom: .5em;
-        
         font-family: 'Montserrat';
         }
         img{  
   margin-left: 9px;
   margin-right: 9px;
-    </style>
-</head>
 
+</style>
+</head>
 <body>
-    <nav id="nav">
+    
+     <nav id="nav">
         <div class="navLinks">
             <a href="index.html">
                 <div class="navLink">Home</div>
@@ -48,20 +146,97 @@
             Blahblaha
         </div>
     </nav>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="../images/me.jpg" style="width:100%">
+  <div class="text">Me on my first pair of skates.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="../images/raina.jpg" style="width:100%">
+  <div class="text">Me and Raina!</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="../images/resin.jpg" style="width:100%">
+  <div class="text">Some of my resin work.</div>
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="../images/ftk2.jpg" style="width:100%">
+  <div class="text">Me with my FTK team.</div>
+        
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+    <br>
+    <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+   
+    <br>
+    <br>
+    
     <div id="pageBody">
         <div class="aboutContent">
             <h1>Who I am:</h1>
             <p> I am a second year student at Georgia Tech majoring in Computational Media, which is a mix of Computer Science and literature, media, and communications. </p>
             <h1>What I do:</h1>
-            <p><img src="../images/me.jpg" width ="300" height = "400" alt = "Me on Skates" align = "left">I spend most of time when not working on acadmics on wheels, <a href = "https://www.instagram.com/johoskates/" title = "Roller Skater">roller skating</a> around Atlanta and the surrounding area. I picked up this lovely hobby the beginning of April 2020, as the world began to get used to the effects of COVID-19. </p>
+            <p>I spend most of time when not working on acadmics on wheels, <a href = "https://www.instagram.com/johoskates/" title = "Roller Skater">roller skating</a> around Atlanta and the surrounding area. I picked up this lovely hobby the beginning of April 2020, as the world began to get used to the effects of COVID-19. </p>
             <p>
             I am well versed in Adobe InDesign, and working to be proficient in Adobe Photoshop and Illustrator.</p>
             
             <p> I have been lucky enough to be able to participate in Children's Healthcare of Atlanta's Miracle Marathon since my junior year of high school, allowing me to <a href = "https://events.dancemarathon.com/index.cfm?fuseaction=donordrive.participant&participantID=730546" title = "Donor Drive">raise</a> over $1,500 for kids who go through more than I could ever understand.</p>
             <h1> More about me:</h1>
-            <p>I am an avid resin crafter and have even been able to open my own  <a href = "https://www.etsy.com/shop/BlueLightResin" title = "Resin Artist">Etsy Shop</a>! I also have an adorable Schnoodle named Raina, and love anything True Crime related.<img src="../images/raina.jpg" width ="300" height = "300" alt = "Raina" align = "center"><img src="../images/resin.jpg" width ="350" height = "300" alt = "Resin" align = "center"><img src="../images/ftk2.jpg" width ="250" height = "300" alt = "Me on Skates" align = "center"></p>
+            <p>I am an avid resin crafter and have even been able to open my own  <a href = "https://www.etsy.com/shop/BlueLightResin" title = "Resin Artist">Etsy Shop</a>! I also have an adorable Schnoodle named Raina, and love anything True Crime related.</p>
         </div>
     </div>
-</body>
 
-</html>
+<br>
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
